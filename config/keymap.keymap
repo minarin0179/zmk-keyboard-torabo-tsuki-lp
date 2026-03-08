@@ -30,11 +30,11 @@
 
         layer_1 {
             bindings = <
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans                  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans  &trans  &mkp LCLK  &mkp RCLK  &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
-&trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans  &trans  &trans     &trans     &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans     &trans     &trans     &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mkp LCLK  &mo 4      &mkp RCLK  &mkp MB4  &mkp MB5
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &mkp MCLK  &trans     &trans    &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans     &trans     &trans     &trans    &trans
             >;
         };
 
@@ -57,13 +57,14 @@
 &trans  &trans   &trans   &trans        &kp DELETE    &kp TAB     &trans  &trans  &trans            &trans     &trans         &trans     &trans      &trans
             >;
         };
+
         layer_4 {
             bindings = <
-&trans  &trans  &trans  &trans        &trans        &trans                                                    &trans       &trans  &trans     &trans           &trans                &trans
-&trans  &trans  &trans  &trans        &trans        &trans                                                    &trans       &trans  &trans     &trans           &trans                &trans
-&trans  &trans  &trans  &trans        &trans        &trans       &trans                &trans                 &trans       &trans  &trans     &trans           &trans                &trans
-&trans  &trans  &trans  &trans        &trans        &trans       &trans                &trans                 &trans       &trans  &trans     &trans           &trans                &trans
-&trans  &trans  &trans  &trans        &trans        &trans       &trans                &trans                 &trans       &trans  &trans     &trans           &trans                &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
