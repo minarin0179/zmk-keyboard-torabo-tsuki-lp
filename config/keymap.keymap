@@ -20,11 +20,11 @@
 
         layer_0 {
             bindings = <
-&trans      &trans  &trans  &trans        &trans        &trans                                                    &trans       &trans  &trans     &trans   &trans                &trans
-&kp TAB     &kp Q   &kp W   &kp E         &kp R         &kp T                                                     &kp Y        &kp U   &kp I      &kp O    &kp P                 &kp MINUS
-&kp LSHIFT  &kp A   &kp S   &kp D         &kp F         &kp G        &trans                &trans                 &kp H        &kp J   &kp K      &kp L    &kp SEMI              &kp SQT
-&kp LCTRL   &kp Z   &kp X   &kp C         &kp V         &kp B        &kp SPACE             &kp RET                &kp N        &kp M   &kp COMMA  &kp DOT  &mt RIGHT_SHIFT FSLH  &kp INT_RO
-&none       &none   &none   &kp LEFT_GUI  &kp LEFT_ALT  &lt 2 SPACE  &mt LCTRL LANGUAGE_2  &mt RSHIFT LANGUAGE_1  &lt 3 ENTER  &trans  &trans     &none    &none                 &none
+&trans      &trans  &trans  &trans        &trans        &trans                                                    &trans       &trans  &trans     &trans           &trans                &trans
+&kp TAB     &kp Q   &kp W   &kp E         &kp R         &kp T                                                     &kp Y        &kp U   &kp I      &kp O            &kp P                 &kp MINUS
+&kp LSHIFT  &kp A   &kp S   &kp D         &kp F         &kp G        &trans                &trans                 &kp H        &kp J   &kp K      &kp L            &kp SEMI              &kp SQT
+&kp LCTRL   &kp Z   &kp X   &kp C         &kp V         &kp B        &kp SPACE             &kp RET                &kp N        &kp M   &kp COMMA  &kp DOT          &mt RIGHT_SHIFT FSLH  &kp INT_RO
+&none       &none   &none   &kp LEFT_GUI  &kp LEFT_ALT  &lt 2 SPACE  &mt LCTRL LANGUAGE_2  &mt RSHIFT LANGUAGE_1  &lt 3 ENTER  &trans  &trans     &kp PRINTSCREEN  &none                 &none
             >;
         };
 
