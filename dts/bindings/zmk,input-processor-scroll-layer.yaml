@@ -1,8 +1,0 @@
-# Copyright (c) 2024 The ZMK Contributors
-# SPDX-License-Identifier: MIT
-
-description: Input processor that remaps trackball X/Y to scroll when a specified layer is active
-
-compatible: "zmk,input-processor-scroll-layer"
-
-include: ip_one_param.yaml
