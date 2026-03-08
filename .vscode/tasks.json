@@ -1,0 +1,125 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build: right_central + left_peripheral",
+            "dependsOn": ["Build: right_central", "Build: left_peripheral"],
+            "dependsOrder": "sequence",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build: all",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.sh all",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build: left_central",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.sh left_central",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build: right_peripheral",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.sh right_peripheral",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build: left_peripheral",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.sh left_peripheral",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build: right_central",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.sh right_central",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build: double_ball_left_peripheral",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.sh double_ball_left_peripheral",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build: double_ball_right_central",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.sh double_ball_right_central",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build: settings_reset",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.sh settings_reset",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build (pristine): all",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.sh --pristine all",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        },
+        {
+            "label": "Build (pristine): left_central",
+            "type": "shell",
+            "command": "${workspaceFolder}/build.sh --pristine left_central",
+            "group": "build",
+            "presentation": {
+                "reveal": "always",
+                "panel": "shared"
+            },
+            "problemMatcher": []
+        }
+    ]
+}

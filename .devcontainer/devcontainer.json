@@ -1,0 +1,30 @@
+{
+  "name": "ZMK - torabo_tsuki_lp",
+  "image": "zmkfirmware/zmk-dev-arm:4.1-branch",
+  "workspaceFolder": "/workspaces/zmk-keyboard-torabo-tsuki-lp",
+  "workspaceMount": "source=${localWorkspaceFolder},target=/workspaces/zmk-keyboard-torabo-tsuki-lp,type=bind,consistency=cached",
+  "mounts": [
+    "source=zmk-torabo-tsuki-lp-zmk,target=/workspaces/zmk/zmk,type=volume",
+    "source=zmk-torabo-tsuki-lp-zephyr,target=/workspaces/zmk/zephyr,type=volume",
+    "source=zmk-torabo-tsuki-lp-modules,target=/workspaces/zmk/modules,type=volume",
+    "source=zmk-torabo-tsuki-lp-tools,target=/workspaces/zmk/tools,type=volume"
+  ],
+  "postCreateCommand": "bash /workspaces/zmk-keyboard-torabo-tsuki-lp/.devcontainer/post-create.sh",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "terminal.integrated.defaultProfile.linux": "bash",
+        "cmake.configureOnOpen": false
+      },
+      "extensions": [
+        "ms-vscode.cpptools",
+        "twxs.cmake"
+      ]
+    }
+  },
+  "remoteEnv": {
+    "WEST_WORKSPACE": "/workspaces/zmk",
+    "ZMK_CONFIG": "/workspaces/zmk/config/config",
+    "ZMK_EXTRA_MODULES": "/workspaces/zmk/config"
+  }
+}

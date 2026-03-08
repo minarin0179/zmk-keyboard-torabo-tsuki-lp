@@ -1,0 +1,27 @@
+# Build outputs
+firmware/
+build/
+dist/
+
+# Claude Code local settings
+.claude/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Editor files
+*.swp
+*.swo
+*~
+.idea/
+
+
+zephyr
+.west
