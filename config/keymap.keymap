@@ -2,6 +2,7 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
+#include "keys_ja.h"
 
 / {
     combos {
@@ -21,7 +22,7 @@
             bindings = <
 &trans      &trans  &trans  &trans        &trans        &trans                                                    &trans       &trans  &trans     &trans           &trans                &trans
 &kp TAB     &kp Q   &kp W   &kp E         &kp R         &kp T                                                     &kp Y        &kp U   &kp I      &kp O            &kp P                 &kp MINUS
-&kp LSHIFT  &kp A   &kp S   &kp D         &kp F         &kp G        &trans                &trans                 &kp H        &kp J   &kp K      &kp L            &kp SEMI              &kp SQT
+&kp LSHIFT  &kp A   &kp S   &kp D         &kp F         &kp G        &trans                &trans                 &kp H        &kp J   &kp K      &kp L            &kp SEMI              &kp JA_COLON
 &kp LCTRL   &kp Z   &kp X   &kp C         &kp V         &kp B        &kp SPACE             &kp RET                &kp N        &kp M   &kp COMMA  &kp DOT          &mt RIGHT_SHIFT FSLH  &kp INT_RO
 &none       &none   &none   &kp LEFT_GUI  &kp LEFT_ALT  &lt 2 SPACE  &mt LCTRL LANGUAGE_2  &mt RSHIFT LANGUAGE_1  &lt 3 ENTER  &trans  &trans     &kp PRINTSCREEN  &none                 &none
             >;
@@ -40,7 +41,7 @@
         layer_2 {
             bindings = <
 &trans  &trans        &trans       &trans         &trans        &trans                         &trans        &trans       &trans     &trans         &trans        &trans
-&trans  &kp LS(EXCL)  &kp LS(DQT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)                  &kp LS(AMPS)  &kp LS(SQT)  &kp CARET  &kp LS(TILDE)  &kp LS(PIPE)  &trans
+&trans  &kp EXCL      &kp JA_DQT   &kp HASH       &kp DLLR      &kp PRCNT                      &kp JA_AMPS   &kp JA_SQT   &kp JA_CARET  &kp JA_TILDE  &kp JA_PIPE  &trans
 &trans  &kp N1        &kp N2       &kp N3         &kp N4        &kp N5         &trans  &trans  &kp N6        &kp N7       &kp N8     &kp N9         &kp N0        &trans
 &kp F1  &kp F2        &kp F3       &kp F4         &kp F5        &kp F6         &trans  &trans  &kp F7        &kp F8       &kp F9     &kp F10        &kp F11       &kp F12
 &trans  &trans        &trans       &trans         &trans        &trans         &trans  &trans  &trans        &trans       &trans     &trans         &trans        &trans
@@ -50,9 +51,9 @@
         layer_3 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                        &trans        &trans    &trans      &trans      &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &kp LBKT                      &kp RBKT      &kp BSPC  &kp UP      &kp DEL     &kp AT         &kp LS(EQUAL)
-&trans  &trans  &trans  &trans  &trans  &kp LS(LPAR)  &trans  &trans  &kp LS(RPAR)  &kp LEFT  &kp DOWN    &kp RIGHT   &kp LS(PLUS)   &kp LS(STAR)
-&trans  &trans  &trans  &trans  &trans  &kp LS(LPAR)  &trans  &trans  &kp LS(RBRC)  &tog 1    &kp LS(LT)  &kp LS(GT)  &kp LS(QMARK)  &kp FSLH
+&trans  &trans  &trans  &trans  &trans  &kp JA_LBKT                   &kp JA_RBKT   &kp BSPC  &kp UP      &kp DEL     &kp JA_AT      &kp JA_EQUAL
+&trans  &trans  &trans  &trans  &trans  &kp JA_LPAR   &trans  &trans  &kp JA_RPAR   &kp LEFT  &kp DOWN    &kp RIGHT   &kp JA_PLUS    &kp JA_STAR
+&trans  &trans  &trans  &trans  &trans  &kp JA_LBRC   &trans  &trans  &kp JA_RBRC   &tog 1    &kp LT      &kp GT      &kp QMARK      &kp JA_UNDER
 &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans        &trans    &trans      &bt BT_CLR  &bt BT_SEL 1   &bt BT_SEL 0
             >;
         };
