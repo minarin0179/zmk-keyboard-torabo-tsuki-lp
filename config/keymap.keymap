@@ -4,83 +4,6 @@
 #include <dt-bindings/zmk/pointing.h>
 #include "keys_ja.h"
 
-// Keymap Editor does not follow includes. Keep JA_* defines here as a fallback
-// so it can resolve custom JIS keycodes while the firmware still uses keys_ja.h.
-#ifndef JA_CARET
-#define JA_CARET (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_EQUAL_AND_PLUS))
-#endif
-#ifndef JA_AT
-#define JA_AT (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE))
-#endif
-#ifndef JA_LBKT
-#define JA_LBKT (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE))
-#endif
-#ifndef JA_RBKT
-#define JA_RBKT (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_BACKSLASH_AND_PIPE))
-#endif
-#ifndef JA_YEN
-#define JA_YEN (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_INTERNATIONAL3))
-#endif
-#ifndef JA_COLON
-#define JA_COLON (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE))
-#endif
-
-#ifndef JA_DQT
-#define JA_DQT (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_2_AND_AT)))
-#endif
-#ifndef JA_AMPS
-#define JA_AMPS (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_6_AND_CARET)))
-#endif
-#ifndef JA_SQT
-#define JA_SQT (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_7_AND_AMPERSAND)))
-#endif
-#ifndef JA_LPAR
-#define JA_LPAR (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_8_AND_ASTERISK)))
-#endif
-#ifndef JA_RPAR
-#define JA_RPAR (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_9_AND_LEFT_PARENTHESIS)))
-#endif
-#ifndef JA_EQUAL
-#define JA_EQUAL (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_MINUS_AND_UNDERSCORE)))
-#endif
-#ifndef JA_UNDER
-#define JA_UNDER (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_INTERNATIONAL1)))
-#endif
-#ifndef JA_TILDE
-#define JA_TILDE (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_EQUAL_AND_PLUS)))
-#endif
-#ifndef JA_GRAVE
-#define JA_GRAVE (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_LEFT_BRACKET_AND_LEFT_BRACE)))
-#endif
-#ifndef JA_LBRC
-#define JA_LBRC (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_RIGHT_BRACKET_AND_RIGHT_BRACE)))
-#endif
-#ifndef JA_RBRC
-#define JA_RBRC (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_BACKSLASH_AND_PIPE)))
-#endif
-#ifndef JA_PIPE
-#define JA_PIPE (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_INTERNATIONAL3)))
-#endif
-#ifndef JA_PLUS
-#define JA_PLUS (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_SEMICOLON_AND_COLON)))
-#endif
-#ifndef JA_STAR
-#define JA_STAR (LS(ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_APOSTROPHE_AND_QUOTE)))
-#endif
-
-#ifndef JA_ZENKAKU
-#define JA_ZENKAKU (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_GRAVE_ACCENT_AND_TILDE))
-#endif
-#ifndef JA_HENKAN
-#define JA_HENKAN (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_INTERNATIONAL4))
-#endif
-#ifndef JA_MUHENKAN
-#define JA_MUHENKAN (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_INTERNATIONAL5))
-#endif
-#ifndef JA_KANA
-#define JA_KANA (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_INTERNATIONAL2))
-#endif
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -99,7 +22,7 @@
             bindings = <
 &trans      &trans  &trans  &trans        &trans        &trans                                                    &trans       &trans  &trans     &trans           &trans                &trans
 &kp TAB     &kp Q   &kp W   &kp E         &kp R         &kp T                                                     &kp Y        &kp U   &kp I      &kp O            &kp P                 &kp MINUS
-&kp LSHIFT  &kp A   &kp S   &kp D         &kp F         &kp G        &trans                &trans                 &kp H        &kp J   &kp K      &kp L            &kp SEMI              &kp JA_COLON
+&kp LSHIFT  &kp A   &kp S   &kp D         &kp F         &kp G        &trans                &trans                 &kp H        &kp J   &kp K      &kp L            &kp SEMI              &kp COLON
 &kp LCTRL   &kp Z   &kp X   &kp C         &kp V         &kp B        &kp SPACE             &kp RET                &kp N        &kp M   &kp COMMA  &kp DOT          &mt RIGHT_SHIFT FSLH  &kp INT_RO
 &none       &none   &none   &kp LEFT_GUI  &kp LEFT_ALT  &lt 2 SPACE  &mt LCTRL LANGUAGE_2  &mt RSHIFT LANGUAGE_1  &lt 3 ENTER  &trans  &trans     &kp PRINTSCREEN  &none                 &none
             >;
@@ -118,7 +41,7 @@
         layer_2 {
             bindings = <
 &trans  &trans        &trans       &trans         &trans        &trans                         &trans        &trans       &trans     &trans         &trans        &trans
-&trans  &kp EXCL      &kp JA_DQT   &kp HASH       &kp DLLR      &kp PRCNT                      &kp JA_AMPS   &kp JA_SQT   &kp JA_CARET  &kp JA_TILDE  &kp JA_PIPE  &trans
+&trans  &kp EXCL      &kp DQT      &kp HASH       &kp DLLR      &kp PRCNT                      &kp AMPS      &kp SQT      &kp CARET     &kp TILDE     &kp PIPE     &trans
 &trans  &kp N1        &kp N2       &kp N3         &kp N4        &kp N5         &trans  &trans  &kp N6        &kp N7       &kp N8     &kp N9         &kp N0        &trans
 &kp F1  &kp F2        &kp F3       &kp F4         &kp F5        &kp F6         &trans  &trans  &kp F7        &kp F8       &kp F9     &kp F10        &kp F11       &kp F12
 &trans  &trans        &trans       &trans         &trans        &trans         &trans  &trans  &trans        &trans       &trans     &trans         &trans        &trans
@@ -128,9 +51,9 @@
         layer_3 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans                        &trans        &trans    &trans      &trans      &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &kp JA_LBKT                   &kp JA_RBKT   &kp BSPC  &kp UP      &kp DEL     &kp JA_AT      &kp JA_EQUAL
-&trans  &trans  &trans  &trans  &trans  &kp JA_LPAR   &trans  &trans  &kp JA_RPAR   &kp LEFT  &kp DOWN    &kp RIGHT   &kp JA_PLUS    &kp JA_STAR
-&trans  &trans  &trans  &trans  &trans  &kp JA_LBRC   &trans  &trans  &kp JA_RBRC   &tog 1    &kp LT      &kp GT      &kp QMARK      &kp JA_UNDER
+&trans  &trans  &trans  &trans  &trans  &kp LBKT                      &kp RBKT      &kp BSPC  &kp UP      &kp DEL     &kp AT         &kp EQUAL
+&trans  &trans  &trans  &trans  &trans  &kp LPAR      &trans  &trans  &kp RPAR      &kp LEFT  &kp DOWN    &kp RIGHT   &kp PLUS       &kp STAR
+&trans  &trans  &trans  &trans  &trans  &kp LBRC      &trans  &trans  &kp RBRC      &tog 1    &kp LT      &kp GT      &kp QMARK      &kp UNDERSCORE
 &trans  &trans  &trans  &trans  &trans  &trans        &trans  &trans  &trans        &trans    &trans      &bt BT_CLR  &bt BT_SEL 1   &bt BT_SEL 0
             >;
         };
