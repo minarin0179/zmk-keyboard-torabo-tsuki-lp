@@ -100,3 +100,98 @@
 
 /* カタカナ/ひらがな */
 #define JA_KANA (ZMK_HID_USAGE(HID_USAGE_KEY, HID_USAGE_KEY_KEYBOARD_INTERNATIONAL2))
+
+// ----------------------------------------------------------------
+// Override US symbol keycodes with JIS-appropriate usages.
+// This keeps keymap editor compatibility while emitting correct JIS output.
+// ----------------------------------------------------------------
+
+#ifdef AT
+#undef AT
+#endif
+#define AT (JA_AT)
+
+#ifdef LBKT
+#undef LBKT
+#endif
+#define LBKT (JA_LBKT)
+
+#ifdef RBKT
+#undef RBKT
+#endif
+#define RBKT (JA_RBKT)
+
+#ifdef COLON
+#undef COLON
+#endif
+#define COLON (JA_COLON)
+
+#ifdef CARET
+#undef CARET
+#endif
+#define CARET (JA_CARET)
+
+#ifdef TILDE
+#undef TILDE
+#endif
+#define TILDE (JA_TILDE)
+
+#ifdef PIPE
+#undef PIPE
+#endif
+#define PIPE (JA_PIPE)
+
+#ifdef LPAR
+#undef LPAR
+#endif
+#define LPAR (JA_LPAR)
+
+#ifdef RPAR
+#undef RPAR
+#endif
+#define RPAR (JA_RPAR)
+
+#ifdef EQUAL
+#undef EQUAL
+#endif
+#define EQUAL (JA_EQUAL)
+
+#ifdef UNDERSCORE
+#undef UNDERSCORE
+#endif
+#define UNDERSCORE (JA_UNDER)
+
+#ifdef PLUS
+#undef PLUS
+#endif
+#define PLUS (JA_PLUS)
+
+#ifdef STAR
+#undef STAR
+#endif
+#define STAR (JA_STAR)
+
+#ifdef LBRC
+#undef LBRC
+#endif
+#define LBRC (JA_LBRC)
+
+#ifdef RBRC
+#undef RBRC
+#endif
+#define RBRC (JA_RBRC)
+
+#ifdef AMPS
+#undef AMPS
+#endif
+#define AMPS (JA_AMPS)
+
+#ifdef SQT
+#undef SQT
+#endif
+#define SQT (JA_SQT)
+
+#ifdef DQT
+#undef DQT
+#endif
+#define DQT (JA_DQT)
